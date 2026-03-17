@@ -50,7 +50,7 @@ export function WarrantyDocument({
               <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest leading-none mt-1">Status: <span className="text-emerald-500">Pronto para Impressão</span></p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-3">
             <button
               onClick={onBack}
@@ -78,22 +78,22 @@ export function WarrantyDocument({
       </div>
 
       <div className="max-w-5xl mx-auto p-8 md:p-12 print:p-0 relative">
-        <div ref={documentRef} className="bg-white text-black shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] print:shadow-none p-16 print:p-10 rounded-[2px] print:rounded-none relative overflow-hidden">
+        <div ref={documentRef} className="bg-white text-black shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] print:shadow-none p-16 print:px-10 print:pt-2 print:pb-10 rounded-[2px] print:rounded-none relative overflow-hidden">
           {/* Subtle watermark in preview */}
           <div className="print:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[100px] font-black text-zinc-100/50 -rotate-[30deg] pointer-events-none uppercase tracking-[0.5em] select-none">
             Original
           </div>
-          <div className="text-center mb-8">
-            <div className="text-black font-black tracking-widest text-3xl mb-2">LURYX DUTY FREE</div>
-            <h1 className="text-4xl font-bold text-black mb-4 uppercase">Termo de Garantia</h1>
+          <div className="text-center mb-4">
+            <div className="text-black font-black tracking-widest text-xl mb-1">LURYX DUTY FREE</div>
+            <h1 className="text-2xl font-bold text-black mb-2 uppercase">Termo de Garantia</h1>
           </div>
 
-          <div className="space-y-6 text-sm leading-relaxed">
+          <div className="space-y-3 text-[13px] leading-snug">
             <p className="text-justify">
               A <strong>LURYX DUTY FREE</strong> inscrita no CNPJ nº: <strong>21.977.171/0001-45</strong> assegura ao cliente abaixo identificado uma garantia de <strong>90 (noventa) dias</strong> sobre o objeto descrito, contada a partir da data de emissão deste certificado.
             </p>
 
-            <div className="border-l-4 border-black pl-4 space-y-2">
+            <div className="border-l-4 border-black pl-4 space-y-2 text-[12px]">
               <p>• A GARANTIA DE 90 (NOVENTA) dias está de acordo com o artigo 26 inciso II do Código de Defesa do Consumidor;</p>
               <p>• Funcionamento, instalação e atualização de aplicativos, bem como o sistema operacional do aparelho NÃO FAZEM parte desta garantia;</p>
               <p>• Limpeza e conservação do aparelho NÃO FAZEM parte desta garantia;</p>
@@ -106,40 +106,42 @@ export function WarrantyDocument({
               <p>• Atenção: a LURYX DUTY FREE NÃO realiza troca de cortesia, assegurando aos seus clientes o direito de acionar a garantia de acordo com os termos que constam neste documento.</p>
             </div>
 
-            <div className="border-2 border-black p-4 rounded">
-              <h2 className="font-bold text-black mb-3 underline">A GARANTIA É CANCELADA AUTOMATICAMENTE NOS SEGUINTES CASOS:</h2>
-              <p className="text-justify text-black font-medium">
+            <div className="border-2 border-black p-3 rounded">
+              <h2 className="font-bold text-black mb-2 underline text-sm">A GARANTIA É CANCELADA AUTOMATICAMENTE NOS SEGUINTES CASOS:</h2>
+              <p className="text-justify text-black text-[11px] leading-tight">
                 Em ocasiões de quedas, esmagamentos, sobrecarga elétrica; exposição do aparelho a altas temperaturas, umidade ou líquidos, exposição do aparelho a poeira, pó e/ou limalha de metais, ou ainda quando constatado mau uso do aparelho, instalações, modificações ou atualizações no seu sistema operacional, abertura do equipamento ou tentativa de conserto deste por terceiros mesmo que para realização de outros serviços. Além de lente touchscreen que apresente mau uso, trincados ou quebrados, riscados, manchados, descolados ou com cabo flex rompido.
               </p>
             </div>
 
-            <div className="bg-neutral-50 border border-neutral-200 p-6 rounded-lg space-y-4">
-              <div className="grid grid-cols-3 gap-4">
+            <div className="bg-neutral-50 border border-neutral-200 p-4 print:p-2 rounded-lg space-y-2">
+              <div className="grid grid-cols-2 gap-2 text-xs">
                 <div>
                   <span className="font-semibold">Data:</span> {currentDate}
                 </div>
-                <div className="col-span-2">
-                  <span className="font-semibold">Número da Nota Fiscal:</span> {invoiceNumber}
+                <div>
+                  <span className="font-semibold">Nota Fiscal:</span> {invoiceNumber}
                 </div>
               </div>
 
               {products.map((product, index) => (
-                <div key={index} className="border-t border-neutral-300 pt-4">
-                  <div className="grid grid-cols-2 gap-4">
+                <div key={index} className="border-t border-neutral-300 pt-2 space-y-1">
+                  <div className="grid grid-cols-2 gap-2 text-[12px]">
                     <div>
                       <span className="font-semibold">Marca:</span> {product.brand}
                     </div>
                     <div>
                       <span className="font-semibold">Modelo:</span> {product.description}
                     </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-[11px] text-neutral-600">
                     {product.imei_serial && (
-                      <div className="col-span-2">
+                      <div>
                         <span className="font-semibold">IMEI/Série:</span> {product.imei_serial}
                       </div>
                     )}
                     {product.barcode && (
-                      <div className="col-span-2">
-                        <span className="font-semibold">Código de Barras:</span> {product.barcode}
+                      <div>
+                        <span className="font-semibold">Barcode:</span> {product.barcode}
                       </div>
                     )}
                   </div>
@@ -147,24 +149,24 @@ export function WarrantyDocument({
               ))}
             </div>
 
-            <div className="text-center py-6">
-              <p className="font-semibold mb-8">Li e concordo com o TERMO DE GARANTIA aplicado na LURYX DUTY FREE.</p>
+            <div className="text-center py-2">
+              <p className="font-semibold mb-4">Li e concordo com o TERMO DE GARANTIA aplicado na LURYX DUTY FREE.</p>
 
-              <div className="space-y-8">
+              <div className="space-y-4">
                 <div>
-                  <div className="border-t-2 border-black w-80 mx-auto mb-2"></div>
+                  <div className="border-t-2 border-black w-80 mx-auto mb-1"></div>
                   <p className="font-semibold">{customerName || '_______________________________________________'}</p>
                   <p className="text-xs text-neutral-600">Assinatura do Cliente</p>
                 </div>
 
                 <div className="text-right">
-                  <p className="text-sm">Emitido por: <strong>{operatorName}</strong></p>
+                  <p className="text-[11px]">Emitido por: <strong>{operatorName}</strong></p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 pt-6 border-t border-neutral-300 text-center text-xs text-neutral-600 space-y-1">
+          <div className="mt-4 pt-4 border-t border-neutral-300 text-center text-[10px] text-neutral-600 space-y-0.5">
             <p>Para mais informações sobre a nossa política de garantia entre em contato conosco</p>
             <p className="font-semibold">LURYX DUTY FREE - CNPJ: 21.977.171/0001-45</p>
           </div>
