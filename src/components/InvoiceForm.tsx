@@ -167,7 +167,7 @@ export function InvoiceForm({ onSubmit }: InvoiceFormProps) {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full group relative flex items-center justify-center px-8 py-5 bg-white hover:bg-zinc-100 text-black font-black rounded-2xl transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-[0.2em] text-xs shadow-[0_20px_40px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_50px_-12px_rgba(255,255,255,0.4)] active:scale-[0.98]"
+                className="w-full group relative flex items-center justify-center px-8 py-5 bg-white hover:bg-zinc-100 text-black font-bold rounded-2xl transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-[0.1em] text-xs shadow-[0_20px_40px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_50px_-12px_rgba(255,255,255,0.4)] active:scale-[0.98]"
               >
                 {loading ? (
                   <span className="flex items-center gap-2">
@@ -227,7 +227,7 @@ export function InvoiceForm({ onSubmit }: InvoiceFormProps) {
                 <button
                   type="submit"
                   disabled={regLoading || regSuccess}
-                  className="w-full px-8 py-5 bg-zinc-800 hover:bg-zinc-700 text-white font-black rounded-2xl transition-all uppercase tracking-[0.2em] text-xs border border-white/5 disabled:opacity-50"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl transition text-xs font-bold uppercase tracking-[0.1em] border border-white/5 disabled:opacity-50"
                 >
                   {regLoading ? 'Cadastrando...' : 'Confirmar Cadastro'}
                 </button>

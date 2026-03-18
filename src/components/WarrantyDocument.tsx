@@ -54,21 +54,21 @@ export function WarrantyDocument({
           <div className="flex items-center gap-3">
             <button
               onClick={onBack}
-              className="flex items-center gap-2 px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl transition text-[10px] font-bold uppercase tracking-widest border border-white/5"
+              className="flex items-center gap-2 px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl transition text-xs font-bold uppercase tracking-[0.1em] border border-white/5"
             >
               <Home className="w-3 h-3" />
               Início
             </button>
             <button
               onClick={handlePrint}
-              className="group flex items-center gap-2 px-6 py-2.5 bg-white hover:bg-zinc-100 text-black rounded-xl transition text-[10px] font-black uppercase tracking-widest shadow-xl shadow-white/10 active:scale-95"
+              className="group flex items-center gap-2 px-6 py-2.5 bg-white hover:bg-zinc-100 text-black rounded-xl transition text-xs font-bold uppercase tracking-[0.1em] shadow-xl shadow-white/10 active:scale-95"
             >
               <Printer className="w-3.5 h-3.5" />
               Imprimir Agora
             </button>
             <button
               onClick={handlePrint}
-              className="flex items-center gap-2 px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl transition text-[10px] font-bold uppercase tracking-widest border border-white/5"
+              className="flex items-center gap-2 px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl transition text-xs font-bold uppercase tracking-[0.1em] border border-white/5"
             >
               <Download className="w-3 h-3" />
               PDF

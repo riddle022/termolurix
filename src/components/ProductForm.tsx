@@ -69,7 +69,7 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
           <div className="bg-gradient-to-b from-white/5 to-transparent px-8 py-10 border-b border-white/5">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-white text-center md:text-left">
               <div className="flex items-center gap-6">
-                <div className="w-16 h-16 rounded-2xl bg-white text-black flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.1)] transform -rotate-2">
+                <div className="w-16 h-16 rounded-2xl bg-white text-black flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                   <FileText className="w-8 h-8" />
                 </div>
                 <div>
@@ -91,7 +91,7 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">Marca</label>
+                  <label className="text-[11px] font-black text-white uppercase tracking-[0.15em] pl-1 mb-2 block">Marca</label>
                   <input
                     type="text"
                     value={currentProduct.brand}
@@ -102,7 +102,7 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">Descrição / Modelo</label>
+                  <label className="text-[11px] font-black text-white uppercase tracking-[0.15em] pl-1 mb-2 block">Descrição / Modelo</label>
                   <input
                     type="text"
                     value={currentProduct.description}
@@ -113,8 +113,8 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1 flex items-center gap-2">
-                    <Barcode className="w-3 h-3" /> Código de Barras
+                  <label className="text-[11px] font-black text-white uppercase tracking-[0.15em] pl-1 mb-2 flex items-center gap-2">
+                    <Barcode className="w-3.5 h-3.5" /> Código de Barras
                   </label>
                   <input
                     type="text"
@@ -127,7 +127,7 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">IMEI / Número de Série</label>
+                  <label className="text-[11px] font-black text-white uppercase tracking-[0.15em] pl-1 mb-2 block">IMEI / Número de Série</label>
                   <input
                     type="text"
                     value={currentProduct.imei_serial}
@@ -140,9 +140,9 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
 
               <button
                 onClick={addProduct}
-                className="w-full bg-white hover:bg-zinc-200 text-black font-black py-4 rounded-xl transition-all flex items-center justify-center gap-3 uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-white/5 group"
+                className="w-full bg-white hover:bg-zinc-200 text-black font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-3 uppercase tracking-[0.1em] text-xs shadow-lg shadow-white/5 group"
               >
-                <Plus className="w-4 h-4 transition-transform group-hover:rotate-90" />
+                <Plus className="w-5 h-5 transition-transform group-hover:rotate-90" />
                 Registrar no Termo
               </button>
             </div>
@@ -183,7 +183,7 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
 
               <div className="grid grid-cols-1 gap-6">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">Nome do Cliente</label>
+                  <label className="text-[11px] font-black text-white uppercase tracking-[0.15em] pl-1 mb-2 block">Nome do Cliente</label>
                   <input
                     type="text"
                     value={customerName}
@@ -204,13 +204,13 @@ export function ProductForm({ invoiceNumber, operatorName, onGenerateWarranty, o
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onBack}
-                className="flex-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-bold py-5 rounded-2xl transition-all uppercase tracking-[0.2em] text-[10px] border border-white/5"
+                className="flex-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-bold py-5 rounded-2xl transition-all uppercase tracking-[0.1em] text-xs border border-white/5"
               >
                 Cancelar
               </button>
               <button
                 onClick={handleGenerate}
-                className="flex-[2] bg-white hover:bg-zinc-100 text-black font-black py-5 rounded-2xl transition-all uppercase tracking-[0.2em] text-[10px] shadow-[0_20px_40px_-15px_rgba(255,255,255,0.2)]"
+                className="flex-[2] bg-white hover:bg-zinc-100 text-black font-bold py-5 rounded-2xl transition-all uppercase tracking-[0.1em] text-xs shadow-[0_20px_40px_-15px_rgba(255,255,255,0.2)]"
               >
                 Gerar Documento Oficial
               </button>
