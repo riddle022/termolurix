@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { FileText } from 'lucide-react';
 
 interface InvoiceFormProps {
   onSubmit: (invoiceNumber: string, operatorCode: string, operatorName: string) => void;
@@ -59,11 +58,8 @@ export function InvoiceForm({ onSubmit }: InvoiceFormProps) {
       <div className="w-full max-w-xl relative">
         <div className="glass-card rounded-3xl overflow-hidden">
           <div className="bg-gradient-to-b from-white/5 to-transparent px-8 py-10 border-b border-white/5 text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-white text-black mb-6 shadow-[0_0_50px_rgba(255,255,255,0.2)] transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-              <FileText className="w-10 h-10" />
-            </div>
-            <h1 className="text-4xl font-black tracking-tighter text-white mb-2 uppercase">Garantia</h1>
-            <p className="text-zinc-500 font-bold tracking-[0.4em] text-[10px] uppercase">Luryx Duty Free</p>
+            <h1 className="text-4xl font-black tracking-tighter text-white mb-3 uppercase">Termo Garantia</h1>
+            <p className="text-white font-bold tracking-[0.4em] text-sm uppercase">Luryx Duty Free</p>
           </div>
 
           <form onSubmit={handleSubmit} className="p-8 space-y-8">
